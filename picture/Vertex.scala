@@ -2,6 +2,8 @@
 class Vertex( val x: Double, val y: Double ) {
   def getX = x
   def getY = y
+
+  override def toString = x + ", " + y
 } // Vertex
 
 object Vertex {
@@ -20,6 +22,7 @@ object Triangle {
   def apply(Ex: Edge, Ey: Edge, Ez: Edge):
     Triangle = new Triangle(Ex, Ey, Ez)
 }
+
 object make {
   def makeTriangle (triangle: Triangle) : Triangle = {
     val ver1 = new Vertex(triangle.getEdge1.getMidpointX, triangle.getEdge1.getMidpointY)
